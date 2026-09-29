@@ -94,11 +94,10 @@ def parte_mese(mese):
 
 def parte_giorno(giorno, sesso):
     return giorno if sesso == "M" else str(int(giorno)+40).zfill(2)
-
     
 
 def parte_codicecatastale(comune):
-    comune = comune.upper()
+    comune = comune.lower()
     
     with open("Elenco-comuni-italiani.csv", mode="r", encoding="utf-8") as elenco:
         righe = csv.reader(elenco)
@@ -188,4 +187,4 @@ def calcola_cf(nome, cognome, giorno, mese, anno, comune, sesso):
     return cf
 
 
-print(calcola_cf("Mario", "Rossi", "01", "04", "1998", "Milano", "M"))
+print(calcola_cf("Mario", "Rossi", "01", "04", "1998", "Agliè", "M"))
