@@ -185,6 +185,3 @@ def calcola_cf(nome, cognome, giorno, mese, anno, comune, sesso):
     cf = parte_cognome(cognome) + parte_nome(nome) + parte_anno(anno) + parte_mese(mese) + parte_giorno(giorno, sesso) + parte_codicecatastale(comune)
     cf += parte_caratterecontrollo(cf)
     return cf
-
-
-print(calcola_cf("Mario", "Rossi", "01", "04", "1998", "Agliè", "M"))
